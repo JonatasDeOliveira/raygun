@@ -135,7 +135,7 @@ func stacktrace(err error) StackTrace {
 			parts := strings.Split(line, ":")
 
 			var n int
-			if len(parts) < 1 {
+			if len(parts) < 2 {
 				n = -1
 			} else {
 				var err error
