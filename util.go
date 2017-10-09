@@ -145,7 +145,8 @@ func stacktrace(err error) StackTrace {
 				}
 			}
 
-			stack.AddEntry(n, "", parts[0], "")
+			// raygun ignores the line number if there is no package, so we set it to a dot
+			stack.AddEntry(n, ".", parts[0], "")
 		}
 
 		return stack
